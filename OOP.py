@@ -40,3 +40,10 @@ class Warrior(Hero):
 class Healer(Hero):
     def heal(self):
         self.hp = min(self.hp + 10, self.max_hp)
+
+
+heroes = [Hero("Ben", 100), Hero("Alice", 0), Hero("Bob", 50)]
+heroes[2].max_hp = 100
+
+status_list = ["OK" if hero.hp > 0 else "DEAD" for hero in heroes]
+print(status_list)
